@@ -142,4 +142,20 @@ public class MyInteger {
         }
         return false;
     }
+
+    public static int[] parseInt(char[] listCharacters){
+        int [] listNumber = new int[listCharacters.length];
+        for (int i = 0; i < listCharacters.length; i++) {
+            listNumber[i] = (int) listCharacters[i];
+        }
+        return listNumber;
+    }
+
+    public static int[] parseInt(String convertString){
+        int[] number = new int[convertString.length()];
+        for (int i = 0; i < convertString.length(); i++) {
+            number[i] = (int) convertString.charAt(i);
+        }
+        return number;
+    }
 }

@@ -17,6 +17,10 @@ public class MyIntegerTest {
         displayCompareParamaterInt(value);
 
         displayCompareParameterObject(value);
+
+        displayParseInt();
+
+        displayParseIntString();
     }
 
     public static void displayNonParameter(int value){
@@ -55,5 +59,22 @@ public class MyIntegerTest {
         MyInteger compareNumber = new MyInteger(value);
         System.out.println("display method compare has parameter object");
         System.out.println("is value equals number " + compareNumber.equals(numberObject));
+    }
+
+    public static void displayParseInt(){
+        char[] listCharacter = {1, 'a', 7, 9};
+        System.out.println("display method parseInt has parameter char[] ");
+        System.out.println("List number ");
+        for (int i = 0; i < listCharacter.length; i++) {
+            System.out.print(MyInteger.parseInt(listCharacter)[i] + " ");
+        }
+    }
+
+    public static void displayParseIntString(){
+        String convertString = "name";
+        System.out.println("\ndisplay method parseInt has parameter string");
+        for (int i = 0; i < convertString.length(); i++) {
+            System.out.print(MyInteger.parseInt(convertString)[i] + " ");
+        }
     }
 }
